@@ -1,5 +1,6 @@
 package ru.maklas.bodymaker.runtime.save_beans;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
@@ -190,8 +191,7 @@ public class BodyPoly implements Json.Serializable{
     }
 
     public static BodyPoly fromFile(String internalPath){
-        //FileHandle fh = Gdx.files.internal(internalPath);
-        FileHandle fh = new FileHandle(internalPath);
+        FileHandle fh = Gdx.files.internal(internalPath);
         return fromFile(fh);
     }
 
