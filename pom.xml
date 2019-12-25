@@ -6,7 +6,7 @@
 
     <groupId>ru.maklas.bodymaker.runtime</groupId>
     <artifactId>MBodyRuntime</artifactId>
-    <version>0.1</version>
+    <version>0.1.2</version>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
