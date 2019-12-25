@@ -84,11 +84,11 @@ public class FixShape implements Json.Serializable{
 
     @Override
     public void read(Json json, JsonValue jsonData) {
-        name = jsonData.get("name").asString();
-        density = jsonData.get("density").asFloat();
-        restitution = jsonData.get("restitution").asFloat();
-        friction = jsonData.get("friction").asFloat();
-        sensor = jsonData.get("sensor").asBoolean();
+        name = jsonData.getString("name");
+        density = jsonData.getFloat("density", 0);
+        restitution = jsonData.getFloat("restitution", 0);
+        friction = jsonData.getFloat("friction", 0.2f);
+        sensor = jsonData.getBoolean("sensor", false);
         final JsonValue points = jsonData.get("points");
         Array<Vector2> pointsArr = new Array<Vector2>();
         for (JsonValue entry = points.child; entry != null; entry = entry.next){
